@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email-Craft->Email-Builder</title>
+    <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+    <header class="editor-header">
+        <h2>Email-Craft</h2>
+        <div>
+            <button onclick="saveTemplate()">Save</button>
+            <button onclick="exportHTML()">Export</button>
+        </div>
+    </header>
+
+    <section class="recent">
+        <h3>Recent Templates</h3>
+        <div id="recentList"></div>
+    </section>
+
+    <main>
+        <aside class="tools">
+            <h3>Blocks</h3>
+            <button onclick="addBlock('text')">Text</button>
+            <button onclick="addBlock('image')">Image</button>
+            <button onclick="addBlock('button')">Button</button>
+            <button onclick="addBlock('divider')">Divider</button>
+        </aside>
+
+        <section id="editor"></section>
+
+        <aside class="settings" id="settings">
+            <p>Select a block</p>
+        </aside>
+    </main>
+
+    <script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* editor/editor.css */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:system-ui,sans-serif;
+}
+
+body{
+    background:#f4f6f8;
+}
+
+.editor-header{
+    background:#111827;
+    color:#fff;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.editor-header button{
+    margin-left:10px;
+    padding:6px 14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.recent{
+    background:#fff;
+    padding:12px 20px;
+    border-bottom:1px solid #ddd;
+}
+
+#recentList{
+    display:flex;
+    gap:10px;
+    margin-top:8px;
+}
+
+.recent-card{
+    padding:8px 14px;
+    border-radius:8px;
+    background:#eef2ff;
+    cursor:pointer;
+}
+
+main{
+    display:grid;
+    grid-template-columns:220px 1fr 260px;
+    height:calc(100vh - 120px);
+}
+
+.tools,.settings{
+    background:#fff;
+    padding:15px;
+    border-right:1px solid #ddd;
+}
+
+.tools button{
+    width:100%;
+    margin-top:10px;
+    padding:10px;
+    border-radius:6px;
+}
+
+#editor{
+    background:#fff;
+    padding:20px;
+    overflow:auto;
+}
+
+.block{
+    border:1px dashed #ccc;
+    padding:10px;
+    margin-bottom:10px;
+    position:relative;
+    cursor:pointer;
+}
+
+.block.active{
+    border-color:#2563eb;
+}
+
+.block-controls{
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+
+.block-controls button{
+    margin-left:4px;
+}
+
+.align-buttons{
+    display:flex;
+    gap:6px;
+    margin:8px 0;
+}
+
+.settings, .settings h3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.settings label {
+    display: block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #555;
+}
+
+.settings input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.settings input[type="color"] {
+    padding: 4px;
+    height: 40px;
+}
+
+.settings p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+
+    .tools {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tools h3 {
+        display: none;
+    }
+
+    .tools button {
+        width: 23%;
+        flex: 0 0 auto;
+        padding: 8px 14px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    #editor {
+        min-height: 300px;
+    }
+
+
+    .settings {
+        border-right: none;
+        border-top: 1px solid #ddd;
+        margin-top: 10px;
+    }
+
+}
