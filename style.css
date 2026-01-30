@@ -49,7 +49,7 @@ header{
 
 .hero{
     max-width:900px;
-    padding:80px 60px;
+    padding:20px 20px;
 }
 
 .badge{
@@ -114,7 +114,7 @@ header{
     }
 
     .hero {
-        padding: 50px 20px;
+        padding: 20px 20px;
     }
 
     .hero h1 {
@@ -171,7 +171,7 @@ header{
 
 .features {
     text-align: center;
-    padding: 60px 40px;
+    padding: 20px 40px;
 }
 
 .features h1 {
@@ -486,3 +486,4 @@ header{
         text-align: center;
     }
 }
+
